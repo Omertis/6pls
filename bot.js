@@ -292,7 +292,7 @@ client.on('message', message => {
 })
 
 client.on('ready', () => {
- user.setActivity("6help",{type: 'LISTENING'});
+     client.user.setActivity("6help",{type: 'LISTENING'});
 
 });
 
