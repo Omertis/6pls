@@ -143,7 +143,7 @@ ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 
 **The Current Audio Playing** <a:blob:439807830586032138>${serverQueue.songs[0].title}`)
 		return msg.channel.sendEmbed(embedqu);
-	} else if (command === `stop`) {
+	} else if (command === `pause`) {
 		if (serverQueue && serverQueue.playing) {
 			serverQueue.playing = false;
 			serverQueue.connection.dispatcher.pause();
@@ -263,7 +263,8 @@ msg.author.send("Commands Music " + `  **
 :headphones:  ${prefix}stop|لأيقاف الموسيقى  
 :headphones:  ${prefix}volume |لتغير حجم الصوت
 :headphones:  ${prefix}np | لرؤية الموسيقى الشغالة حالياً
-:headphones:  ${prefix}resume |لاعادت تشغيل الاغنية الموجودة
+:headphones:  ${prefix}pause |لايقاف الاغنية الحالية مؤقتا
+:headphones:  ${prefix}resume |لاكمال الاغنية الحالية
 :headphones:  ${prefix}join |لتعليق البوت فالروم
 for help = <@426471752877604874>
 **`);
