@@ -292,7 +292,8 @@ client.on('message', message => {
 })
 
 client.on('ready', () => {
-  client.user.setGame('6help ','LISTENING');
+ user.setActivity("6help",{type: 'LISTENING'});
+
 });
 
 client.login(process.env.BOT_TOKEN);
