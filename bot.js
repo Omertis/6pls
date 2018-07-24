@@ -251,7 +251,7 @@ if (message.content.startsWith(PREFIX + 'setavatar')) {
 }
 });
 
-let prefix = 'm';
+let prefix = '6';
 
 client.on('message', msg => {
 	if (msg.content.startsWith(prefix + 'help')) {
@@ -264,6 +264,8 @@ msg.author.send("Commands Music " + `  **
 :headphones:  ${prefix}volume |لتغير حجم الصوت
 :headphones:  ${prefix}np | لرؤية الموسيقى الشغالة حالياً
 :headphones:  ${prefix}resume |لاعادت تشغيل الاغنية الموجودة
+:headphones:  ${prefix}join |لتعليق البوت فالروم
+for help = <@426471752877604874>
 **`);
  }
 });
@@ -276,7 +278,7 @@ client.on('message', message => {
   // we ignore it
   if (!message.guild) return;
 
-  if (message.content === 'mjoin') {
+  if (message.content === '6join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
@@ -290,7 +292,7 @@ client.on('message', message => {
 })
 
 client.on('ready', () => {
-  client.user.setGame('❤ والله احبك ❤','https://www.twitch.tv/pd13');
+  client.user.setGame('6help ','LISTENING');
 });
 
 client.login(process.env.BOT_TOKEN);
