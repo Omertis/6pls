@@ -276,7 +276,7 @@ client.on('message' , message => {
         if (message.content.startsWith(prefix +"invite")) {
 
 		const embed = new Discord.RichEmbed()
-     .setColor("RANDOM")
+     .setColor("#49E353")
      .setThumbnail(client.user.avatarURL)
      .setAuthor(message.author.username, message.author.avatarURL)
      .setTitle('Click Here To Invite The Bot')
