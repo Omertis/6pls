@@ -266,13 +266,24 @@ msg.author.send("Commands Music " + `  **
 :headphones:  ${prefix}pause |لايقاف الاغنية الحالية مؤقتا
 :headphones:  ${prefix}resume |لاكمال الاغنية الحالية
 :headphones:  ${prefix}join |لتعليق البوت فالروم
+:headphones:  ${prefix}invite |لدعوة البوت لسيرفرك
 for help = <@426471752877604874>
 **`);
  }
 });
 
+client.on('message' , message => {
+        if (message.content.startsWith(prefix +"invite")) {
 
-
+		const embed = new Discord.RichEmbed()
+     .setColor("RANDOM")
+     .setThumbnail(client.user.avatarURL)
+     .setAuthor(message.author.username, message.author.avatarURL)
+     .setTitle('Click Here To Invite The Bot')
+     .setURL('https://discordapp.com/oauth2/authorize?client_id=471241317150883874&scope=bot&permissions=1')
+      message.author.sendEmbed(embed);
+       }
+    });
 
 client.on('message', message => {
   // Voice only works in guilds, if the message does not come from a guild,
