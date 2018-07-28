@@ -267,6 +267,7 @@ msg.author.send("Commands Music " + `  **
 :headphones:  ${prefix}resume |لاكمال الاغنية الحالية
 :headphones:  ${prefix}join |لتعليق البوت فالروم
 :headphones:  ${prefix}invite |لدعوة البوت لسيرفرك
+Support : https://discord.gg/HZXvnJF
 for help = <@426471752877604874>
 **`);
  }
