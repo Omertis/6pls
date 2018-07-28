@@ -280,7 +280,7 @@ client.on('message' , message => {
      .setThumbnail(client.user.avatarURL)
      .setAuthor(message.author.username, message.author.avatarURL)
      .setTitle('Click Here To Invite The Bot')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=471241317150883874&scope=bot&permissions=1')
+     .setURL('https://discordapp.com/oauth2/authorize?client_id=471241317150883874&permissions=53999680&scope=bot')
       message.author.sendEmbed(embed);
        }
     });
