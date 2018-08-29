@@ -81,7 +81,7 @@ client.on('message', async msg => { // eslint-disable-line
 				var video = await youtube.getVideo(url);
 			} catch (error) {
 				try {
-					var videos = await youtube.searchVideos(searchString, 10);
+					var videos = await youtube.searchVideos(searchString, 5);
 					let index = 0;
 					const embed1 = new Discord.RichEmbed()
 			        .setDescription(`**choose the video number| you only have 20s to choose<a:loading:439807730564464659>** :
@@ -257,7 +257,7 @@ client.on('message', msg => {
 	if (msg.content.startsWith(prefix + 'help')) {
 msg.author.send("Commands Music " + `  **
 
-   "  : الاوامر "
+    "  : الاوامر "
 :headphones:  ${prefix}play |اسم لاغنيه / رابط الاغنية 
 :headphones:  ${prefix}skipللإنتقاال الى الاغنيه التاليه (\اذا كان هناك بقائمة الانتظار\
 :headphones:  ${prefix}stop|لأيقاف الموسيقى  
@@ -266,25 +266,13 @@ msg.author.send("Commands Music " + `  **
 :headphones:  ${prefix}pause |لايقاف الاغنية الحالية مؤقتا
 :headphones:  ${prefix}resume |لاكمال الاغنية الحالية
 :headphones:  ${prefix}join |لتعليق البوت فالروم
-:headphones:  ${prefix}invite |لدعوة البوت لسيرفرك
-Support : https://discord.gg/HZXvnJF
-for help = <@426471752877604874>
+for help = <@466858375544832001> 
 **`);
  }
 });
 
-client.on('message' , message => {
-        if (message.content.startsWith(prefix +"invite")) {
 
-		const embed = new Discord.RichEmbed()
-     .setColor("#49E353")
-     .setThumbnail(client.user.avatarURL)
-     .setAuthor(message.author.username, message.author.avatarURL)
-     .setTitle('Click Here To Invite The Bot')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=471241317150883874&permissions=53999680&scope=bot')
-      message.author.sendEmbed(embed);
-       }
-    });
+
 
 client.on('message', message => {
   // Voice only works in guilds, if the message does not come from a guild,
@@ -305,7 +293,7 @@ client.on('message', message => {
 })
 
 client.on('ready', () => {
-     client.user.setActivity("6help",{type: 'LISTENING'});
+     client.user.setActivity("6play",{type: 'LISTENING'});
 
 });
 
