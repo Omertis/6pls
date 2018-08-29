@@ -14,19 +14,15 @@ client.on('ready', () => {
 console.log('Logging into discord..');
 console.log(`
 Login successful.
-
 -----------------
 -----------------
 ${client.user.username}
-
 Connected to:
 ${client.guilds.size} servers
 ${client.channels.size} channel
 ${client.users.size} users
-
 Prefix: ${PREFIX}
 -----------------
-
 Use this url to bring your bot to a server:
 https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2146958588585`);
 
@@ -138,9 +134,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 		let index = 0;
 		const embedqu = new Discord.RichEmbed()
 	.setDescription(`**Songs Queue**
-
 ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
-
 **The Current Audio Playing** <a:blob:439807830586032138>${serverQueue.songs[0].title}`)
 		return msg.channel.sendEmbed(embedqu);
 	} else if (command === `pause`) {
@@ -256,7 +250,6 @@ let prefix = '6';
 client.on('message', msg => {
 	if (msg.content.startsWith(prefix + 'help')) {
 msg.author.send("Commands Music " + `  **
-
     "  : الاوامر "
 :headphones:  ${prefix}play |اسم لاغنيه / رابط الاغنية 
 :headphones:  ${prefix}skipللإنتقاال الى الاغنيه التاليه (\اذا كان هناك بقائمة الانتظار\
